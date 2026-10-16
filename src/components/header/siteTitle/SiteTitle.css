@@ -1,0 +1,48 @@
+#logo-img {
+  width: clamp(48px, 20.53vw, 78px)
+}
+
+#website-name {
+  padding-left: 10px;
+  padding-right: 20px;
+}
+
+#website-name h1 {
+  font-size: clamp(1.75rem, 11.58vw, 2.75rem);
+}
+
+#website-name h2 {
+  font-size: clamp(1rem, 6.84vw, 1.625rem);
+}
+
+#website-name::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background-color: var(--brand-cream);
+}
+
+@media (max-width: 1360px) { 
+    #website-name::after {
+    display: none;
+  }
+
+  #website-name h2 {
+    margin-right: auto;
+  }
+
+  #title-div::after {
+    content: '';
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: auto;
+    height: 1px;
+    background-color: var(--brand-cream);
+  }
+}

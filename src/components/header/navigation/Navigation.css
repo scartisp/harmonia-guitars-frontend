@@ -1,0 +1,20 @@
+
+#nav-ul {
+  gap: 20px 44px;
+  margin: 16px 0 0 0;
+}
+
+#nav-ul a {
+  font-family: var(--inter-font);
+  font-size: 18px;
+  text-decoration: none;
+  color: var(--brand-cream);
+  text-transform: uppercase;
+}
+
+#nav-ul a.selected-page {
+  color: var(--brand-orange);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 8px;
+}

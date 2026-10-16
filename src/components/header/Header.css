@@ -1,5 +1,10 @@
-h1 {color: green;}
+#main-header-container {
+  max-width: 2000px;
+}
 
-.main-header img {
-  width: 200px;
+
+@media (max-width: 1360px) {
+  #main-header-container {
+    flex-direction: column;
+  }
 }

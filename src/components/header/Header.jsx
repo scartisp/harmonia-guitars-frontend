@@ -1,13 +1,14 @@
 import "./Header.css";
-import logo from './images/Logo-mark.svg';
-import Navigation from "../navigation/Navigation";
+import SiteTitle from './siteTitle/SiteTitle'
+import Navigation from "./navigation/Navigation";
 
 const Header = () => {
     return (
-        <header className="main-header">
-            <img src={logo} alt="logo"/>
-            <h1>HI</h1>
-            <Navigation />
+        <header className='border-box flex-row marginal-padding section-divider'>
+            <div id='main-header-container' className='flex jst-slf-center jst-cnt-spc-between align-items-center background-indigo width-100'>
+                <SiteTitle />
+                <Navigation />
+            </div>
         </header>
     );
 };
