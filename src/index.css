@@ -14,7 +14,6 @@
 
 body {
   margin: 0;
-  background-color: var(--brand-indigo);
   min-height: 100vh;
   min-height: 100dvh;
   display: flex;
@@ -46,8 +45,16 @@ body img {
   color: var(--brand-cream);
 }
 
+.font-15px {
+  font-size: 15px;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.txt-underline {
+  text-decoration: underline;
 }
 
 .ltr-spc-two {
@@ -116,6 +123,10 @@ body img {
 
 .width-fit-cnt {
   width: fit-content;
+}
+
+.max-width-2000 {
+  max-width: 2000px;
 }
 
 /*padding rules*/
