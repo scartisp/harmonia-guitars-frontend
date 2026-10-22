@@ -28,3 +28,30 @@
 #hero-btn img {
   padding-left: 10px;
 }
+
+@media (max-width:1000px) {
+  #hero-section {
+    background: linear-gradient(to right,
+        var(--brand-indigo-deep) 0%,
+        var(--brand-indigo-deep) 60%,
+        #4c3b3c 100%);
+  }
+}
+
+@media (max-width: 450px) {
+  #hero-content-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hero-tagline-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+    #hero-p {
+    text-align: center;
+  }
+}

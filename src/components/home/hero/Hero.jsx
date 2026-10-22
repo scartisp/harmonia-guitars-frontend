@@ -5,7 +5,7 @@ import './Hero.css'
 const Hero = () => {
     return (
         <section id='hero-section' className='border-box width-100 section-divider'>
-            <div className='jst-slf-center width-100 max-width-2000'>
+            <div id='hero-content-div' className='jst-slf-center width-100 max-width-2000'>
                 <div id='hero-tagline-div' className='h-font ltr-spc-two uppercase margin-0'>
                     <h2 className='txt-cream'>real songs</h2>
                     <h2 className='txt-cream'>real techniques</h2>

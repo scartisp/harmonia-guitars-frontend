@@ -115,8 +115,16 @@ body img {
   justify-content: space-between;
 }
 
+.align-self-center {
+  align-self: center;
+}
+
 .align-items-center {
   align-items: center;
+}
+
+.align-items-flex-end {
+  align-items: flex-end;
 }
 
 /*margin*/
@@ -144,6 +152,10 @@ body img {
 
 .marginal-padding {
   padding: 25px 30px;
+}
+
+.body-marginal-padding {
+  padding: 25px 20px;
 }
 
 /*section rules*/

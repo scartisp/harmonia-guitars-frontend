@@ -1,0 +1,101 @@
+#carousel-content>img {
+  flex: none;
+  width: clamp(32px, 4vw, 52px);
+  height: auto;
+}
+
+#card-ul {
+  --visible: 4;
+  --gap: 24px;
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: calc(var(--visible) * 270px + (var(--visible) - 1) * var(--gap));
+  overflow: hidden;
+  gap: var(--gap);
+  margin-inline: 20px;
+}
+
+.genre-card {
+  flex: 0 0 calc((100% - (var(--visible) - 1) * var(--gap)) / var(--visible));
+  height: auto;
+  aspect-ratio: 270 / 230;
+  background-size: cover;
+  background-position: center;
+  container-type: inline-size;
+  border-radius: 12px;
+}
+
+.genre-card p {
+  font-size: 9.6cqw;
+  gap: 3.7cqw;
+  margin: 0;
+  margin-inline: 7.4cqw 8.9cqw;
+  margin-bottom: 6.7cqw;
+  background-color: rgba(61, 74, 124, .5);
+}
+
+.genre-card p img {
+  flex: none;
+  height: auto;
+}
+
+.genre-card p img:first-child {
+  width: min(11.85cqw, 32px);
+}
+
+.genre-card p img:last-child {
+  width: min(8.15cqw, 22px);
+  margin-left: auto;
+}
+
+#rock-card {
+  background-image: url(../images/carouselImages/rock.png);
+}
+
+#blues-card {
+  background-image: url(../images/carouselImages/blues.png);
+}
+
+#country-card {
+  background-image: url(../images/carouselImages/country.png);
+}
+
+#funk-card {
+  background-image: url(../images/carouselImages/funk.png);
+}
+
+#carousel-dots-div {
+  gap: 8px;
+}
+
+.selected {
+  width: 26px;
+  height: 8px;
+  border-radius: 4px;
+  background-color: var(--brand-orange);
+}
+
+.unselected {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-cream);
+}
+
+@media (max-width:1000px) {
+  #card-ul {
+    --visible: 3;
+  }
+}
+
+@media (max-width:700px) {
+  #card-ul {
+    --visible: 2;
+  }
+}
+
+@media (max-width: 450px) {
+  #card-ul {
+    --visible: 1;
+  }
+}
