@@ -12,7 +12,7 @@ const Footer = () => {
                 </div>
                 <div id='footer-bottom-section'>
                     <p className='body-txt-font txt-cream font-15px margin-0'>&copy; 2026 Harmonia Guitars</p>
-                    <p className='body-txt-font txt-cream font-15px txt-underline margin-0'>Contact</p>
+                    <p className='body-txt-font txt-cream font-15px txt-underline margin-0 pointer'>Contact</p>
                 </div>
             </div>
         </footer>

@@ -45,6 +45,10 @@ body img {
   color: var(--brand-cream);
 }
 
+.txt-indigo-deep {
+  color: var(--brand-indigo-deep)
+}
+
 .font-15px {
   font-size: 15px;
 }
@@ -76,6 +80,10 @@ body img {
 
 .background-deepest-indigo {
   background-color: var(--brand-deepest-indigo);
+}
+
+.background-orange {
+  background-color: var(--brand-orange);
 }
 
 /*flex rules*/
@@ -160,4 +168,16 @@ body img {
 /*msc*/
 .border-box {
   box-sizing: border-box;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.border-none {
+  border: none;
+}
+
+.border-transparent {
+  border: transparent;
 }
