@@ -1,0 +1,22 @@
+.genre-card p {
+  font-size: 9.6cqw;
+  gap: 3.7cqw;
+  margin: 0;
+  margin-inline: 7.4cqw 8.9cqw;
+  margin-bottom: 6.7cqw;
+  background-color: rgba(61, 74, 124, .5);
+}
+
+.genre-card p img {
+  flex: none;
+  height: auto;
+}
+
+.genre-card p img:first-child {
+  width: min(11.85cqw, 32px);
+}
+
+.genre-card p img:last-child {
+  width: min(8.15cqw, 22px);
+  margin-left: auto;
+}

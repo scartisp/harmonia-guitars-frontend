@@ -63,6 +63,9 @@ body img {
 .txt-underline {
   text-decoration: underline;
 }
+.txt-decoration-none {
+  text-decoration: none;
+}
 
 .ltr-spc-two {
   letter-spacing: 2px;
