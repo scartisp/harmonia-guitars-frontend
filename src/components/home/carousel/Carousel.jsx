@@ -6,6 +6,7 @@ import guitar from '../images/carouselIcons/guitar.png';
 import fedora from '../images/carouselIcons/fedora.png';
 import cowboyHat from '../images/carouselIcons/cowboy-hat.png';
 import star from '../images/carouselIcons/star.png';
+import sax from '../images/carouselIcons/jazz-icon.png';
 
 const Carousel = () => {
     return (
@@ -27,6 +28,10 @@ const Carousel = () => {
                     </li>
                     <li id='funk-card' className='genre-card flex align-items-flex-end '>
                         <p className="flex align-items-center h-font txt-cream uppercase ltr-spc-two width-100"><img src={star} />country<img
+                            src={arrowRight} /></p>
+                    </li>
+                    <li id='jazz-card' className='genre-card flex align-items-flex-end '>
+                        <p className="flex align-items-center h-font txt-cream uppercase ltr-spc-two width-100"><img src={sax} />Jazz<img
                             src={arrowRight} /></p>
                     </li>
                 </ul>

@@ -5,7 +5,7 @@
 }
 
 #card-ul {
-  --visible: 4;
+  --visible: 5;
   --gap: 24px;
   flex: 1 1 auto;
   min-width: 0;
@@ -64,6 +64,10 @@
   background-image: url(../images/carouselImages/funk.png);
 }
 
+#jazz-card {
+  background-image: url(../images/carouselImages/jazz.png);
+}
+
 #carousel-dots-div {
   gap: 8px;
 }
@@ -80,6 +84,12 @@
   height: 8px;
   border-radius: 50%;
   background-color: var(--brand-cream);
+}
+
+@media (max-width:1360px) {
+  #card-ul {
+    --visible: 4;
+  }
 }
 
 @media (max-width:1000px) {
