@@ -15,59 +15,6 @@
   margin-inline: 20px;
 }
 
-.genre-card {
-  flex: 0 0 calc((100% - (var(--visible) - 1) * var(--gap)) / var(--visible));
-  height: auto;
-  aspect-ratio: 270 / 230;
-  background-size: cover;
-  background-position: center;
-  container-type: inline-size;
-  border-radius: 12px;
-}
-
-.genre-card p {
-  font-size: 9.6cqw;
-  gap: 3.7cqw;
-  margin: 0;
-  margin-inline: 7.4cqw 8.9cqw;
-  margin-bottom: 6.7cqw;
-  background-color: rgba(61, 74, 124, .5);
-}
-
-.genre-card p img {
-  flex: none;
-  height: auto;
-}
-
-.genre-card p img:first-child {
-  width: min(11.85cqw, 32px);
-}
-
-.genre-card p img:last-child {
-  width: min(8.15cqw, 22px);
-  margin-left: auto;
-}
-
-#rock-card {
-  background-image: url(../images/carouselImages/rock.png);
-}
-
-#blues-card {
-  background-image: url(../images/carouselImages/blues.png);
-}
-
-#country-card {
-  background-image: url(../images/carouselImages/country.png);
-}
-
-#funk-card {
-  background-image: url(../images/carouselImages/funk.png);
-}
-
-#jazz-card {
-  background-image: url(../images/carouselImages/jazz.png);
-}
-
 #carousel-dots-div {
   gap: 8px;
 }
