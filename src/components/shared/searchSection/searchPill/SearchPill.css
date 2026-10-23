@@ -1,0 +1,17 @@
+.search-pill {
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  
+}
+
+.search-unselected {
+  background-color: transparent;
+  border: 1px solid var(--brand-cream);
+}
+
+.search-selected {
+  color: var(--brand-indigo-deep);
+  background-color: var(--brand-orange);
+  border: 1px solid transparent;
+}

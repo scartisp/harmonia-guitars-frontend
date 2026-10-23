@@ -50,9 +50,9 @@ const Carousel = () => {
                 <img src={carouselNextArrow} id="carousel-next" className="pointer" />
             </div>
             <div id="carousel-dots-div" className='flex flex-row align-self-center jst-slf-center'>
-                <div className="selected"></div>
-                <div className="unselected"></div>
-                <div className="unselected"></div>
+                <div className="carousel-selected"></div>
+                <div className="carousel-unselected"></div>
+                <div className="carousel-unselected"></div>
             </div>
         </section>
     );

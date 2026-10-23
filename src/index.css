@@ -145,6 +145,10 @@ body img {
   align-items: center;
 }
 
+.align-items-baseline {
+  align-items: baseline;
+}
+
 .align-items-flex-end {
   align-items: flex-end;
 }
@@ -218,4 +222,8 @@ body img {
 
 .border-transparent {
   border: transparent;
+}
+
+.gap-8px {
+  gap: 8px;
 }

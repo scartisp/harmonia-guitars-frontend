@@ -19,14 +19,14 @@
   gap: 8px;
 }
 
-.selected {
+.carousel-selected {
   width: 26px;
   height: 8px;
   border-radius: 4px;
   background-color: var(--brand-orange);
 }
 
-.unselected {
+.carousel-unselected {
   width: 8px;
   height: 8px;
   border-radius: 50%;
