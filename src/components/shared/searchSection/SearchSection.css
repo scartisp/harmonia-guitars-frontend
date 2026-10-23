@@ -1,0 +1,7 @@
+#search-section-container {
+  display: grid;
+  grid-template-columns: min(1300px, 100%);
+  justify-content: center;
+  row-gap: 20px;
+  box-sizing: border-box;
+}

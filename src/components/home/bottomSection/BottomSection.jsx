@@ -17,7 +17,7 @@ const BottomSection = () => {
                     <p id="text-p" className='body-txt-font font-18px txt-cream'>Browse songs and practice schedules shared by guitarists like you. Or dig into the
                         technique library to find exactly what to work on next!</p>
                     
-                    <Button  txtColor='txt-orange' backgroundColor='background-transparent' border='2px solid var(--brand-orange)' text='browse the song library' arrow={arrowRight}/>
+                    <Button  txtColor='txt-orange' backgroundColor='background-transparent' border='2px solid var(--brand-orange)' text='browse the song library' arrowColor='var(--brand-orange)'/>
                 </div>
                 <img src={practiceImg} id='practice-img' />
             </div>

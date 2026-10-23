@@ -1,0 +1,7 @@
+#search-bar-input:focus {
+  outline: none;
+}
+
+#search-bar-div:focus-within {
+  outline: 2px solid var(--brand-orange);
+}

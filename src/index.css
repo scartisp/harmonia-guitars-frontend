@@ -75,6 +75,10 @@ body img {
   font-weight: 500;
 }
 
+.weight-600 {
+  font-weight: 600;
+}
+
 /*background colors*/
 .background-indigo {
   background-color: var(--brand-indigo);
@@ -92,6 +96,10 @@ body img {
   background-color: var(--brand-orange);
 }
 
+.background-cream {
+    background-color: var(--brand-cream);
+}
+
 .background-transparent {
   background: transparent;
 }
@@ -99,6 +107,10 @@ body img {
 /*flex rules*/
 .flex {
   display: flex;
+}
+
+.flex-1 {
+  flex: 1;
 }
 
 .flex-row {

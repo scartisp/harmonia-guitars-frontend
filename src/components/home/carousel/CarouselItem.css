@@ -26,7 +26,7 @@
   width: min(11.85cqw, 32px);
 }
 
-.genre-card p img:last-child {
+.arrow-right {
   width: min(8.15cqw, 22px);
   margin-left: auto;
 }

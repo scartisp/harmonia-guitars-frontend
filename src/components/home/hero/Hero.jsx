@@ -13,7 +13,7 @@ const Hero = () => {
                     <h2 className='txt-orange'>real people</h2>
                 </div>
                 <p id="hero-p" className='body-txt-font txt-cream'>Build a weekly practice schedule around the songs, techniques, and genres you want to master!</p>
-                <Button txtColor='txt-indigo-deep' backgroundColor='background-orange' border='transparent' text='build your schedule' arrow={arrowRight}/>
+                <Button txtColor='txt-indigo-deep' backgroundColor='background-orange' border='transparent' text='build your schedule' arrowColor='var(--brand-indigo-deep)'/>
             </div>
         </section>
     );
