@@ -1,7 +1,6 @@
 import './Carousel.css'
 import carouselPrevArrow from '../images/carousel-prev-arrow.png';
 import carouselNextArrow from '../images/carousel-next-arrow.png';
-import arrowRight from '../images/arrow-right-orange.png';
 
 import rock from '../images/carouselImages/rock.png';
 import blues from '../images/carouselImages/blues.png';

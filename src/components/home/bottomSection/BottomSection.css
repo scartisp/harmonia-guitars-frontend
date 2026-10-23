@@ -31,16 +31,6 @@
   margin: 22px 0;
 }
 
-#bottom-section-btn {
-  padding: 14px;
-  border: 2px solid var(--brand-orange);
-  border-radius: 6px;
-}
-
-#bottom-section-btn img {
-  padding-left: 10px;
-}
-
 #practice-img {
   border-radius: 12px;
   flex: 0 1 560px;

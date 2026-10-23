@@ -3,6 +3,8 @@ import guitarOutline from '../images/guitar-outline.png';
 import arrowRight from '../images/arrow-right-orange.png';
 import practiceImg from '../images/practice-img.png'
 
+import Button from '../../shared/button/Button'
+
 const BottomSection = () => {
     return (
         <section id='bottom-section' className='border-box width-100 body-marginal-padding section-divider'>
@@ -14,7 +16,8 @@ const BottomSection = () => {
                         className='txt-orange'>community currated <br /></span>song and schedule libraries</h2>
                     <p id="text-p" className='body-txt-font font-18px txt-cream'>Browse songs and practice schedules shared by guitarists like you. Or dig into the
                         technique library to find exactly what to work on next!</p>
-                    <button id="bottom-section-btn" className='flex align-items-center jst-cnt-center body-txt-font font-15px txt-orange background-transparent'>browse the song library <img src={arrowRight} /></button>
+                    
+                    <Button  txtColor='txt-orange' backgroundColor='background-transparent' border='2px solid var(--brand-orange)' text='browse the song library' arrow={arrowRight}/>
                 </div>
                 <img src={practiceImg} id='practice-img' />
             </div>

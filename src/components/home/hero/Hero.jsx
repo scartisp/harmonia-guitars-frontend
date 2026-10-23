@@ -1,6 +1,7 @@
-import arrowRight from '../images/arrow-right-indigo-deep.png'
+import arrowRight from '../images/arrow-right-indigo-deep.png';
+import Button from '../../shared/button/Button';
 
-import './Hero.css'
+import './Hero.css';
 
 const Hero = () => {
     return (
@@ -12,9 +13,7 @@ const Hero = () => {
                     <h2 className='txt-orange'>real people</h2>
                 </div>
                 <p id="hero-p" className='body-txt-font txt-cream'>Build a weekly practice schedule around the songs, techniques, and genres you want to master!</p>
-                <button id="hero-btn" className="flex align-items-center jst-cnt-center body-txt-font txt-indigo-deep
-                font-15px uppercase border-transparent background-orange pointer">build your schedule
-                    <img src={arrowRight} /></button>
+                <Button txtColor='txt-indigo-deep' backgroundColor='background-orange' border='transparent' text='build your schedule' arrow={arrowRight}/>
             </div>
         </section>
     );

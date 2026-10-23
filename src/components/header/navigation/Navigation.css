@@ -12,7 +12,7 @@
   text-transform: uppercase;
 }
 
-#nav-ul a.selected-page {
+#nav-ul a.active {
   color: var(--brand-orange);
   text-decoration: underline;
   text-decoration-thickness: 3px;

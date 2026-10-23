@@ -17,16 +17,7 @@
   font-weight: 300;
   max-width: 500px;
   margin-bottom: 0;
-}
-
-#hero-btn {
-  margin-top: 28px;
-  padding: 14px;
-  border-radius: 6px;
-}
-
-#hero-btn img {
-  padding-left: 10px;
+  margin-bottom: 28px;
 }
 
 @media (max-width:1000px) {
