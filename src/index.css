@@ -49,11 +49,20 @@ body img {
   color: var(--brand-indigo-deep)
 }
 
+.font-12px {
+  font-size: 12px;
+}
+
 .font-15px {
   font-size: 15px;
 }
+
 .font-18px {
   font-size: 18px;
+}
+
+.font-46px {
+  font-size: 46px;
 }
 
 .uppercase {
@@ -63,6 +72,7 @@ body img {
 .txt-underline {
   text-decoration: underline;
 }
+
 .txt-decoration-none {
   text-decoration: none;
 }
@@ -158,6 +168,11 @@ body img {
   margin: 0;
 }
 
+/*height rules*/
+.max-height-fit-cnt {
+  max-height: fit-content;
+}
+
 /*width rules*/
 .width-100 {
   width: 100%;
@@ -165,6 +180,10 @@ body img {
 
 .width-fit-cnt {
   width: fit-content;
+}
+
+.max-width-fit-cnt {
+  max-width: fit-content;
 }
 
 .max-width-2000 {
@@ -186,6 +205,10 @@ body img {
 
 .body-marginal-padding {
   padding: 25px 20px;
+}
+
+.vt-body-marginal-padding {
+  padding: 25px 0;
 }
 
 /*section rules*/

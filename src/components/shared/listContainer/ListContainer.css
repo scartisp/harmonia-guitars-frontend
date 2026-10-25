@@ -1,0 +1,27 @@
+.card-grid-div {
+  --columns: 3;
+  display: grid;
+  grid-template-columns: repeat(var(--columns), minmax(0, 300px));
+  justify-content: center;
+  gap: 50px;
+  margin-top: 42px;
+}
+
+@media (max-width: 1045px) {
+  .card-grid-div {
+    --columns: 2;
+  }
+}
+
+@media (max-width: 695px) {
+  .card-grid-div {
+    --columns: 1;
+  }
+}
+
+@media (max-width: 430px) {
+  .list-container-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

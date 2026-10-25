@@ -1,7 +1,17 @@
+#search-bar-input {
+  min-width: 0px;
+}
+
 #search-bar-input:focus {
   outline: none;
 }
 
 #search-bar-div:focus-within {
   outline: 2px solid var(--brand-orange);
+}
+
+@media (max-width:430px) {
+   #search-bar-div .search-btn {
+    padding: 5px;
+  }
 }
