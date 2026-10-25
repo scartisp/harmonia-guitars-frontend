@@ -1,0 +1,6 @@
+.technique-list-header {
+  margin: 0;
+  margin-bottom: 22px;
+  padding-bottom: 4px;
+  border-bottom: 3px solid var(--brand-cream);
+}

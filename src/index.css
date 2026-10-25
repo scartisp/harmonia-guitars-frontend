@@ -53,6 +53,10 @@ body img {
   font-size: 12px;
 }
 
+.font-14px {
+  font-size: 14px;
+}
+
 .font-15px {
   font-size: 15px;
 }
@@ -85,6 +89,10 @@ body img {
   letter-spacing: 2px;
 }
 
+.weight-400 {
+  font-weight: 400px;
+}
+
 .weight-500 {
   font-weight: 500;
 }
@@ -111,7 +119,7 @@ body img {
 }
 
 .background-cream {
-    background-color: var(--brand-cream);
+  background-color: var(--brand-cream);
 }
 
 .background-transparent {
@@ -203,6 +211,10 @@ body img {
   padding: 0;
 }
 
+.padding-10 {
+  padding: 10px;
+}
+
 .marginal-padding {
   padding: 25px 30px;
 }
@@ -257,4 +269,8 @@ body img {
 
 .gap-4px {
   gap: 4px;
+}
+
+.item-border {
+  border: 1px solid var(--brand-cream);
 }

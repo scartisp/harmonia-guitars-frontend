@@ -72,7 +72,7 @@ const FilterGenre = () => {
             <FilterItem filterText='Funk' />
             <FilterItem filterText='Blues' />
             <FilterItem filterText='Country' />
-            <FilterItem filterText='metal' />
+            <FilterItem filterText='Metal' />
         </div>
     );
 };

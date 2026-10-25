@@ -6,7 +6,7 @@ const FilterType = props => {
                 <span style={{ paddingRight: '10px' }} className="h-font font-26px txt-cream">{props.title}</span>
                 <span className="body-txt-font font-15px txt-orange pointer">clear</span>
             </p>
-                 <p style={{marginTop: '0', marginBottom: '12px'}} className="body-txt-font font-15px txt-cream">{props.description}</p>
+                 <p style={{marginTop: '0', marginBottom: '12px'}} className="body-txt-font font-14px txt-cream">{props.description}</p>
             {props.content}
         </div>
     );
