@@ -7,7 +7,7 @@ const SongCard = props => {
             <img src={props.image} className='song-card-img' />
             <p className='genre-p absolute body-txt-font weight-500 txt-indigo-deep margin-0 background-orange'>{props.genre}</p>
             <div style={{ paddingInline: '18px', marginTop: '16px' }} className='flex flex-row jst-cnt-spc-between align-items-center'>
-                <h3 style={{ fontSize: '24px', maxWidth: '190px' }} className='h-font txt-cream margin-0 weight-500'>{props.title}</h3>
+                <h3 style={{ fontSize: '24px', maxWidth: '190px', paddingRight: '10px'}} className='h-font txt-cream margin-0 weight-500'>{props.title}</h3>
                 <div className='song-rating-div background-indigo-deep max-height-fit-cnt max-width-fit-cnt '>
                     <p>
                         <span style={{ fontSize: '22px' }} className='h-font txt-orange'>{props.rating}</span>
