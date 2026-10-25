@@ -21,15 +21,15 @@ const SearchSection = props => {
                 <SearchBar />
                 <p className='flex wrap align-items-center gap-8px body-txt-font txt-cream font-15px margin-0'>
                     Search in:
-                    <SearchPill text='All' selected={selectedPills.includes('All')} onClick={() => togglePill('All')} />
-                    <SearchPill text='Song name' selected={selectedPills.includes('Song name')} onClick={() => togglePill('Song name')} />
-                    <SearchPill text='Techniques' selected={selectedPills.includes('Techniques')} onClick={() => togglePill('Techniques')} />
-                    <SearchPill text='Genres' selected={selectedPills.includes('Genres')} onClick={() => togglePill('Genres')} />
+                    <SearchPill text={props.searchPillOne} selected={selectedPills.includes(props.searchPillOne)} onClick={() => togglePill(props.searchPillOne)} />
+                    <SearchPill text={props.searchPillTwo} selected={selectedPills.includes(props.searchPillTwo)} onClick={() => togglePill(props.searchPillTwo)} />
+                    <SearchPill text={props.searchPillThree} selected={selectedPills.includes(props.searchPillThree)} onClick={() => togglePill(props.searchPillThree)} />
+                    <SearchPill text={props.searchPillFour} selected={selectedPills.includes(props.searchPillFour)} onClick={() => togglePill(props.searchPillFour)} />
                 </p>
                 <div id='active-filters' className='flex flex-row wrap align-items-center gap-8px body-txt-font txt-cream font-15px '>Must Include:
-                    <ActiveFilters filterType='Genre' filter='Top Songs' />
-                    <ActiveFilters filterType='Technique' filter='Bends' />
-                    <ActiveFilters filterType='Song' filter='The Thrill is Gone' />
+                    <ActiveFilters filterType={props.typeOne} filter={props.filterOne} />
+                    <ActiveFilters filterType={props.typeTwo} filter={props.filterTwo} />
+                    <ActiveFilters filterType={props.typeThree} filter={props.filterThree} />
                     <Plus size={12} />
                     <span className="body-txt-font txt-orange font-15px txt-underline">clear all</span>
 
