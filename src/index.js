@@ -7,6 +7,7 @@ import Home from './pages/home/Home';
 import SongLibrary from './pages/songLibrary/SongLibrary';
 import TechniqueLibrary from './pages/techniqueLibrary/TechniqueLibrary';
 import ScheduleLibrary from './pages/scheduleLibrary/ScheduleLibrary';
+import NewSchedule from './pages/newSchedule/NewSchedule';
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
           <Route path='songLibrary' element={<SongLibrary />} />
           <Route path='techniqueLibrary' element= {<TechniqueLibrary />} />
           <Route path='scheduleLibrary' element= {<ScheduleLibrary />} />
+          <Route path='newSchedule' element= {<NewSchedule />} />
         </Route>
       </Routes>
     </HashRouter>

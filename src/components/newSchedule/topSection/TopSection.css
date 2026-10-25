@@ -1,0 +1,88 @@
+#new-schedule-top-left-div h3 {
+  margin: 0 0 2px 0;
+}
+
+#new-schedule-top-left-div p {
+  margin: 0 0 25px 0;
+}
+
+#days-ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
+
+#days-ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 84px;
+  box-sizing: border-box;
+  padding: 20px 24px;
+  border-radius: 10px;
+}
+
+.selected-day-li {
+  background-color: var(--brand-orange);
+  border: 1px solid var(--brand-orange)
+}
+
+.unselected-day-li {
+  background-color: var(--brand-indigo-deep);
+  border: 1px solid var(--brand-cream);
+}
+
+.selected-day {
+  color: var(--brand-indigo-deep);
+}
+
+.unselected-day {
+  color: var(--brand-cream)
+}
+
+.dot-div {
+  background-color: var(--brand-indigo-deep);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.selected-day-dot {
+  background-color: var(--brand-indigo-deep);
+}
+
+.unselected-day-dot {
+  background-color: var(--brand-cream);
+}
+
+#new-schedule-top-right-top-div {
+  margin-bottom: 50px;
+}
+
+@media (max-width: 950px) {
+  #new-schedule-top-section {
+    justify-content: center;
+  }
+
+  #new-schedule-top-section-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #new-schedule-top-left-div {
+    align-items: center;
+    text-align: center;
+  }
+
+  #new-schedule-top-right-div {
+    margin-top: 20px;
+  }
+
+  #new-schedule-top-right-top-div {
+    margin-bottom: 25px;
+  }
+}

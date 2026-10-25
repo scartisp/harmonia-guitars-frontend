@@ -11,7 +11,7 @@ const Navigation = () => {
                 </NavLink></li>
                 <li className="nav-divider"><NavLink to='/techniqueLibrary'>Technique Library</NavLink></li>
                 <li className="nav-divider"><NavLink to='/scheduleLibrary'>Schedule Library</NavLink></li>
-                <li className="nav-divider"><a href="#">New Schedule</a></li>
+                <li className="nav-divider"><NavLink to='/newSchedule'>New Schedule</NavLink></li>
             </ul>
         </nav>
     );
