@@ -1,0 +1,60 @@
+.filter-item-p {
+  margin-top: 0;
+  padding: 10px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.filter-item-p-selected {
+  background-color: var(--brand-indigo-deep);
+  border: 1px solid var(--brand-orange);
+  border-radius: 8px;
+}
+
+.filter-item-p:not(:last-child) {
+  margin-bottom: 2px;
+}
+
+.filter-item-p:last-child {
+  margin-bottom: 14px;
+}
+
+.filter-item-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+  margin: 0 5px 0 0;
+  flex-shrink: 0;
+  display: grid;
+  place-content: center;
+  border: 2px solid var(--brand-cream);
+  border-radius: 5px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.filter-item-checkbox:checked {
+  border: transparent;
+  background-color: var(--brand-orange);
+}
+
+.filter-item-checkbox::after {
+  content: "";
+  width: 10px;
+  height: 6px;
+  border-left: 2px solid var(--brand-indigo-deep);
+  border-bottom: 2px solid var(--brand-indigo-deep);
+  transform: rotate(-45deg) translateY(-1px);
+  transform: rotate(-45deg) translateY(-1px) scale(0.4);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  opacity: 0;
+}
+
+.filter-item-checkbox:checked::after {
+  opacity: 1;
+  transform: rotate(-45deg) translateY(-1px) scale(1);
+}

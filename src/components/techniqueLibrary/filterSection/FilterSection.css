@@ -1,0 +1,20 @@
+.unfilled-difficulty {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(246, 238, 227, .5);
+}
+
+.filled-difficulty {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--brand-orange);
+}
+
+@media (max-width: 900px) {
+  #filter-section-container {
+    justify-content: center;
+    gap: clamp(24px, 50vw - 430px, 155px);
+  }
+}
