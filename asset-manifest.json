@@ -1,14 +1,25 @@
 {
   "files": {
-    "main.css": "/harmonia-guitars-frontend/static/css/main.a34007f1.css",
-    "main.js": "/harmonia-guitars-frontend/static/js/main.d8552829.js",
+    "main.css": "/harmonia-guitars-frontend/static/css/main.d46a914f.css",
+    "main.js": "/harmonia-guitars-frontend/static/js/main.e6869f06.js",
+    "static/media/Hero.svg": "/harmonia-guitars-frontend/static/media/Hero.aeac8cb2e6fb69849728.svg",
     "static/media/Logo-mark.svg": "/harmonia-guitars-frontend/static/media/Logo-mark.01f355553b303ad6386d8f3b09ab8c9a.svg",
+    "static/media/practice-img.png": "/harmonia-guitars-frontend/static/media/practice-img.54fb32b8176d43c2ffc1.png",
+    "static/media/funk.png": "/harmonia-guitars-frontend/static/media/funk.f36ca72ed3fbf955873c.png",
+    "static/media/beginner.png": "/harmonia-guitars-frontend/static/media/beginner.845262fc39007416a17e.png",
+    "static/media/blues.png": "/harmonia-guitars-frontend/static/media/blues.4911c956aa5ef7e3650c.png",
+    "static/media/country.png": "/harmonia-guitars-frontend/static/media/country.459c5fce6d835366b508.png",
+    "static/media/jazz.png": "/harmonia-guitars-frontend/static/media/jazz.00b75de3f602f3992f2c.png",
+    "static/media/leper-img.png": "/harmonia-guitars-frontend/static/media/leper-img.c0dfc1c7d1c9bbf45f69.png",
+    "static/media/rock.png": "/harmonia-guitars-frontend/static/media/rock.8a0874c5e4b67d0c963e.png",
+    "static/media/guitar-outline.png": "/harmonia-guitars-frontend/static/media/guitar-outline.e070672f88805bcaf88a.png",
     "index.html": "/harmonia-guitars-frontend/index.html",
-    "main.a34007f1.css.map": "/harmonia-guitars-frontend/static/css/main.a34007f1.css.map",
-    "main.d8552829.js.map": "/harmonia-guitars-frontend/static/js/main.d8552829.js.map"
+    "static/media/homepage-bottom.svg": "/harmonia-guitars-frontend/static/media/homepage-bottom.c0420f7c0e9b286a9048.svg",
+    "main.d46a914f.css.map": "/harmonia-guitars-frontend/static/css/main.d46a914f.css.map",
+    "main.e6869f06.js.map": "/harmonia-guitars-frontend/static/js/main.e6869f06.js.map"
   },
   "entrypoints": [
-    "static/css/main.a34007f1.css",
-    "static/js/main.d8552829.js"
+    "static/css/main.d46a914f.css",
+    "static/js/main.e6869f06.js"
   ]
 }
