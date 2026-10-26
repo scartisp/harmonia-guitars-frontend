@@ -236,6 +236,10 @@ body img {
   padding: 25px 0;
 }
 
+.vt2-body-marginal-padding {
+  padding: 0 20px;
+}
+
 /*section rules*/
 .section-divider {
   border-bottom: 3px solid var(--brand-orange);

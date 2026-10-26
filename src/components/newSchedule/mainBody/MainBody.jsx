@@ -1,6 +1,6 @@
 import './MainBody.css'
 import leper from './images/leper-img.png'
-import { Clock, ChevronDown, Plus, GripVertical, Minus, X } from 'lucide-react';
+import { Clock, ChevronDown, Plus, GripVertical, Minus, X, Flag } from 'lucide-react';
 
 const ScheduleItem = props => {
     return (
@@ -52,24 +52,51 @@ const Day = props => {
     );
 };
 
-const GoalSection = () => {
-    return
-}
+const Goal = props => {
+    return (
+        <li>
+            <Flag color='var(--brand-orange)' size={12} />
+            <div className='goal-txt-div flex flex-column'>
+                <h5>{props.title}</h5>
+                <p>target {props.target}</p>
+            </div>
+            <X color='var(--brand-cream)' size={14} />
+        </li>
+    );
+};
+
+const GoalSection = props => {
+    return (
+        <div style={{ marginTop: '25px' }} className='border-box flex flex-column jst-slf-center width-100 max-width-1300 vt2-body-marginal-padding'>
+            <h3 style={{ marginBottom: '10px' }} className='h-font font-26px txt-cream uppercase ltr-spc-two margin-0'>goals</h3>
+            <ul style={{ gap: '14px' }} id='new-schedule-goal-ul' className='list-style-none flex flex-row wrap margin-0 padding-0'>
+                {props.children}
+                <li id='add-goal-li'>
+                    <Plus color='var(--brand-orange)' size={42} />
+                </li>
+            </ul>
+        </div>
+    );
+};
 
 const MainBody = () => {
     return (
         <section className="border-box vt-body-marginal-padding  background-indigo section-divider">
             <ul style={{ gap: '10px' }} className="list-style-none flex flex-column jst-slf-center jst-cnt-center margin-0 padding-0 width-100 max-width-1300">
-                <Day day='sun' techniqueNum='2' songNum='1' time='40 min' />
-                <Day day='mon' techniqueNum='5' songNum='3' time='1 hr' />
-                <Day day='wed' techniqueNum='5' songNum='0' time='1 hr' />
-                <Day day='thu' techniqueNum='3' songNum='1' time='30 min' isOpen>
+                <Day day='sun' techniqueNum={2} songNum={1} time='40 min' />
+                <Day day='mon' techniqueNum={5} songNum={3} time='1 hr' />
+                <Day day='wed' techniqueNum={5} songNum={0} time='1 hr' />
+                <Day day='thu' techniqueNum={3} songNum={1} time='30 min' isOpen>
                     <ScheduleItem title='Legato' subtitle='right hand · any · 4/5' type='technique' time='5 min' />
                     <ScheduleItem img={leper} title='The Leper Affinity- Opeth' subtitle='metal' type='song' time='15 min' />
-                    <ScheduleItem title='Sweep picking' subtitle='lead, left hand · metal, jazz · 5/5' type='technique' time='15 min' nested/>
-                    <ScheduleItem title='syncopation' subtitle='rhythm · any · 3/5' type='technique' time='15 min' nested/>
+                    <ScheduleItem title='Sweep picking' subtitle='lead, left hand · metal, jazz · 5/5' type='technique' time='15 min' nested />
+                    <ScheduleItem title='syncopation' subtitle='rhythm · any · 3/5' type='technique' time='15 min' nested />
                 </Day>
             </ul>
+            <GoalSection >
+                <Goal title='Learn Leper Affinity solo' target='Sept 15' />
+                <Goal title='Finish the Wireframe' target='Sept 13' />
+            </GoalSection>
         </section>
     );
 };

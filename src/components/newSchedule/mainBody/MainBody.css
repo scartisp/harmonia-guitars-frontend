@@ -9,7 +9,7 @@
 }
 
 .opened-day-li {
-  padding: 30px 20px;
+  /* padding: 30px 20px; */
   background-color: var(--brand-indigo-deep);
   border: 1px solid var(--brand-orange);
   border-radius: 18px;
@@ -20,6 +20,7 @@
   font-size: 22px;
   color: var(--brand-cream);
   text-transform: uppercase;
+  letter-spacing: 2px;
   width: clamp(72px, 14%, 146px);
   flex-shrink: 0;
   margin: 0;
@@ -131,12 +132,54 @@
   border-radius: 8px;
 }
 
+/* goal section */
+#new-schedule-goal-ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  background-color: var(--brand-indigo-deep);
+  border: 1px solid var(--brand-cream);
+  border-radius: 10px;
+}
+
+#new-schedule-goal-ul #add-goal-li {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+}
+
+.goal-txt-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.goal-txt-div h5,
+.goal-txt-div p {
+  font-family: var(--inter-font);
+  color: var(--brand-cream);
+  margin: 0;
+}
+
+.goal-txt-div h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.goal-txt-div p {
+  font-size: 12px;
+}
+
+/* responsive design */
 @media (max-width: 500px) {
   .day-title-righmost-div {
     margin: 0 auto 0 0;
   }
+
   .time-stepper {
     gap: 7px;
   }
-
 }
