@@ -1,4 +1,6 @@
 import './Carousel.css'
+import { useState } from 'react';
+
 import carouselPrevArrow from '../images/carousel-prev-arrow.png';
 import carouselNextArrow from '../images/carousel-next-arrow.png';
 
@@ -16,6 +18,12 @@ import sax from '../images/carouselIcons/jazz-icon.png';
 import CarouselItem from './CarouselItem';
 
 const Carousel = () => {
+    const [carouselIndex, setCarouselIndex] = useState(0);
+    const importAll = (resource) => {
+        return resource.keys().map(resource);
+    };
+    const images = importAll(require.context('../images', false, /\.png/));
+
     return (
         <section className='border-box background-indigo width-100 body-marginal-padding section-divider'>
             <div id='carousel-container' className='flex flex-row align-items-center jst-cnt-center'>
