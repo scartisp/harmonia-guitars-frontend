@@ -215,6 +215,10 @@ body img {
   max-width: 1300px;
 }
 
+.max-width-300 {
+  max-width: 300px;
+}
+
 /*padding rules*/
 .padding-0 {
   padding: 0;
@@ -286,4 +290,8 @@ body img {
 
 .item-border {
   border: 1px solid var(--brand-cream);
+}
+
+.display-none {
+  display: none;
 }

@@ -1,6 +1,7 @@
+import './Contact.css'
 import { useState } from "react";
 
-const Contact = () => {
+const Contact = ({ isOpen }) => {
     const [result, setResult] = useState("");
 
     const onSubmit = async (event) => {
@@ -15,9 +16,10 @@ const Contact = () => {
         });
 
         const data = await response.json();
+        await new Promise(resolve => setTimeout(resolve, 1500));
         if (data.success) {
             setResult("Form Submitted Successfully");
-            setTimeout(()=>{setResult('');}, 3000);
+            setTimeout(() => { setResult(''); }, 3000);
             event.target.reset();
         } else {
             setResult("Error");
@@ -25,21 +27,21 @@ const Contact = () => {
     };
 
     return (
-        <form onSubmit={onSubmit}>
+        <form id='contact-form' className={`${isOpen ? 'flex' : 'display-none'} flex-column max-width-300 gap-4px`} onSubmit={onSubmit}>
             <p>
-                <label for='name'>Name:</label>
-                <input type="text" name="name" required />
+                <label className='form-field' htmlFor='name'>Name:</label>
+                <input className='form-field' type="text" name="name" placeholder='Your Name' required />
             </p>
             <p>
-                <label for='email'>Email:</label>
-                <input type="email" name="email" required />
+                <label className='form-field' htmlFor='email'>Email:</label>
+                <input className='form-field' type="email" name="email" placeholder='Your Email' required />
             </p>
             <p>
-                <label for='message'>Email:</label>
-                <textarea name="message" required></textarea>
+                <label className='form-field' htmlFor='message'>Message:</label>
+                <textarea className='form-field' name="message" placeholder='Your Message' required></textarea>
             </p>
-            <p><button type="submit">Submit Form</button></p>
-            <p>{result}</p>
+            <p><button id='form-send-button' className='form-field pointer' type="submit">Send</button></p>
+            <p id='form-result' className='form-field' >{result}</p>
         </form>
     );
 };

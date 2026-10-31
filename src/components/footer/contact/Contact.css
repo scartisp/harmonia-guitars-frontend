@@ -1,0 +1,35 @@
+#contact-form p {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--inter-font);
+  margin: 0;
+}
+
+
+#contact-form label {
+  color: var(--brand-cream);
+}
+
+#contact-form input, #contact-form textarea {
+  margin-bottom: 5px;
+}
+
+#form-send-button {
+  color: var(--brand-indigo-deep);
+  width: fit-content;
+  padding: 7px;
+  margin-bottom: 5px;
+  background-color: var(--brand-orange);
+  border: transparent;
+  border-radius: 6px;
+}
+
+#form-result {
+  color: var(--brand-cream);
+  margin: 0;
+}
+
+.form-field {
+  font-family: var(--inter-font);
+  font-size: 15px;
+}

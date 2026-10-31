@@ -1,7 +1,14 @@
 import './Footer.css'
 import FooterLogo from "./footerLogo/FooterLogo";
+import Contact from './contact/Contact';
+import { useState } from 'react';
 
 const Footer = () => {
+    const [contactOpen, setContactOpen] = useState(false);
+
+    const toggleContact = () => {
+        setContactOpen(!contactOpen);
+    }
     return (
         <footer className="border-box marginal-padding background-deepest-indigo ">
             <div id="main-footer-container" className='jst-slf-center width-100 max-width-2000'>
@@ -12,7 +19,8 @@ const Footer = () => {
                 </div>
                 <div id='footer-bottom-section'>
                     <p className='body-txt-font txt-cream font-15px margin-0'>&copy; 2026 Harmonia Guitars</p>
-                    <p className='body-txt-font txt-cream font-15px txt-underline margin-0 pointer'>Contact</p>
+                    <p className='body-txt-font txt-cream font-15px txt-underline margin-0 pointer' onClick={toggleContact}>Contact</p>
+                    <Contact isOpen={contactOpen}/>
                 </div>
             </div>
         </footer>
