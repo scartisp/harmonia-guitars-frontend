@@ -1,10 +1,25 @@
 import './SongCard.css';
+
+import { useState } from 'react';
+
 import play from './images/play.png';
 
 const SongCard = props => {
+    const [playing, setPlaying]= useState(false);
+
+    const togglePlaying = () => setPlaying(!playing);
+    
     return (
         <div className='song-card relative flex flex-column background-indigo'>
-            <img src={props.image} className='song-card-img' />
+            {playing ? 
+                <iframe 
+                    className='song-card-img'
+                    src={`https://www.youtube.com/embed/${props.videoId}?autoplay=1`}
+                    allow='autoplay; encrypted media'
+                    referrerPolicy='strict-origin-when-cross-origin'
+                    allowFullScreen
+                />
+                : <img src={props.image} className='song-card-img' /> }
             <p className='genre-p absolute body-txt-font weight-500 txt-indigo-deep margin-0 background-orange'>{props.genre}</p>
             <div style={{ paddingInline: '18px', marginTop: '16px' }} className='flex flex-row jst-cnt-spc-between align-items-center'>
                 <h3 style={{ fontSize: '24px', maxWidth: '190px', paddingRight: '10px'}} className='h-font txt-cream margin-0 weight-500'>{props.title}</h3>
@@ -23,7 +38,7 @@ const SongCard = props => {
             </div>
             <p style={{ paddingInline: '18px' }} className='flex flex-row align-items-center'>
                 <img src={play} />
-                <a href='#' style={{ paddingLeft: '8px' }} className='list-style-none body-txt-font font-15px txt-orange '>Listen on Youtube</a>
+                <p style={{ paddingLeft: '8px' }} className='list-style-none body-txt-font font-15px txt-orange txt-underline pointer margin-0' onClick={togglePlaying}>Listen on Youtube</p>
             </p>
         </div>
     );
