@@ -12,9 +12,12 @@ const Navigation = () => {
         { to: '/scheduleLibrary', label: 'schedule library' },
         { to: '/newSchedule', label: 'new schedule' }
     ]
-     const [hovered, setHovered] = useState(null);
-     const { pathname } = useLocation();
-     const highlighted = hovered ?? pathname;
+    const [hovered, setHovered] = useState(null);
+    const toggleHovered = linkTo => {
+        setHovered(linkTo)
+    }
+    const { pathname } = useLocation();
+    const highlighted = hovered ?? pathname;
 
     //toggle nav stuff
     const [menuOpen, setMenuOpen] = useState(false);
@@ -29,10 +32,12 @@ const Navigation = () => {
                 <Menu className='pointer' color='var(--brand-cream)' size={35} onClick={toggleNav} />
             </div>
             <nav id='main-navigation'>
-                <ul id='main-nav-ul' className={`flex wrap jst-cnt-center list-style-none padding-0 ${menuOpen ? '' : 'nav-hidden'} `} onMouseLeave={() => setHovered(null)} >
+                <ul id='main-nav-ul' className={`flex wrap jst-cnt-center list-style-none padding-0 ${menuOpen ? '' : 'nav-hidden'} `} onMouseLeave={() => toggleHovered(null)} >
                     {links.map(link => (
-                        <li key={link.to} className='nav-divider relative' onMouseEnter={ () => setHovered(link.to)}>
-                            <NavLink to={link.to} className={`body-txt-font font-18px uppercase txt-decoration-none ${highlighted === link.to ? 'txt-orange' : 'txt-cream'}` }>{link.label}</NavLink>
+                        <li key={link.to} className='nav-divider relative' onMouseEnter={() => toggleHovered(link.to)}>
+                            <NavLink to={link.to} className={`body-txt-font font-18px uppercase txt-decoration-none ${highlighted === link.to ? 'txt-orange' : 'txt-cream'}`}>
+                                {link.label}
+                            </NavLink>
                             {highlighted === link.to && (
                                 <motion.div layoutId='nav-underline' className='nav-underline' />
                             )}
