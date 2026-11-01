@@ -1,12 +1,23 @@
 import './Navigation.css';
 import { useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Menu } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const Navigation = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
 
+    const links = [
+        { to: '/songLibrary', label: 'song library' },
+        { to: '/techniqueLibrary', label: 'technique library' },
+        { to: '/scheduleLibrary', label: 'schedule library' },
+        { to: '/newSchedule', label: 'new schedule' }
+    ]
+     const [hovered, setHovered] = useState(null);
+     const { pathname } = useLocation();
+     const highlighted = hovered ?? pathname;
+
+    //toggle nav stuff
+    const [menuOpen, setMenuOpen] = useState(false);
     const toggleNav = () => {
         setMenuOpen(!menuOpen);
     };
@@ -18,13 +29,16 @@ const Navigation = () => {
                 <Menu className='pointer' color='var(--brand-cream)' size={35} onClick={toggleNav} />
             </div>
             <nav id='main-navigation'>
-                <ul id='main-nav-ul' className={`flex wrap jst-cnt-center list-style-none padding-0 ${menuOpen ? '' : 'nav-hidden'} `}>
-                    <li className="nav-divider"><NavLink
-                        to='/songLibrary'>Song Library
-                    </NavLink></li>
-                    <li className="nav-divider"><NavLink to='/techniqueLibrary'>Technique Library</NavLink></li>
-                    <li className="nav-divider"><NavLink to='/scheduleLibrary'>Schedule Library</NavLink></li>
-                    <li className="nav-divider"><NavLink to='/newSchedule'>New Schedule</NavLink></li>
+                <ul id='main-nav-ul' className={`flex wrap jst-cnt-center list-style-none padding-0 ${menuOpen ? '' : 'nav-hidden'} `} onMouseLeave={() => setHovered(null)} >
+                    {links.map(link => (
+                        <li key={link.to} className='nav-divider relative' onMouseEnter={ () => setHovered(link.to)}>
+                            <NavLink to={link.to} className={`body-txt-font font-18px uppercase txt-decoration-none ${highlighted === link.to ? 'txt-orange' : 'txt-cream'}` }>{link.label}</NavLink>
+                            {highlighted === link.to && (
+                                <motion.div layoutId='nav-underline' className='nav-underline' />
+                            )}
+
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </>

@@ -38,7 +38,7 @@ const SongCard = props => {
             </div>
             <p style={{ paddingInline: '18px' }} className='flex flex-row align-items-center'>
                 <img src={play} />
-                <p style={{ paddingLeft: '8px' }} className='list-style-none body-txt-font font-15px txt-orange txt-underline pointer margin-0' onClick={togglePlaying}>Listen on Youtube</p>
+                <span style={{ paddingLeft: '8px' }} className='list-style-none body-txt-font font-15px txt-orange txt-underline pointer margin-0' onClick={togglePlaying}>Listen on Youtube</span>
             </p>
         </div>
     );
