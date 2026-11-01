@@ -4,55 +4,57 @@
   height: auto;
 }
 
-#card-ul {
-  --visible: 5;
-  --gap: 24px;
+#card-swiper {
+  --visible: 1;
   flex: 1 1 auto;
   min-width: 0;
-  max-width: calc(var(--visible) * 270px + (var(--visible) - 1) * var(--gap));
-  overflow: hidden;
-  gap: var(--gap);
-  margin-inline: 20px;
+  max-width: calc(var(--visible) * 270px + (var(--visible) - 1) * 24px);
+  margin: 16px 20px;
+}
+
+#card-swiper ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 #carousel-dots-div {
   gap: 8px;
 }
 
-.carousel-selected {
-  width: 26px;
-  height: 8px;
-  border-radius: 4px;
-  background-color: var(--brand-orange);
-}
-
-.carousel-unselected {
+.carousel-dot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background-color: var(--brand-cream);
 }
 
-@media (max-width:1360px) {
-  #card-ul {
-    --visible: 4;
-  }
+.carousel-dot.carousel-selected {
+  width: 26px;
+  border-radius: 4px;
+  background-color: var(--brand-orange);
 }
 
-@media (max-width:1000px) {
-  #card-ul {
-    --visible: 3;
-  }
-}
-
-@media (max-width:700px) {
-  #card-ul {
+@media (min-width: 450px) {
+  #card-swiper {
     --visible: 2;
   }
 }
 
-@media (max-width: 450px) {
-  #card-ul {
-    --visible: 1;
+@media (min-width: 700px) {
+  #card-swiper {
+    --visible: 3;
+  }
+}
+
+@media (min-width: 1000px) {
+  #card-swiper {
+    --visible: 4;
+  }
+}
+
+@media (min-width: 1360px) {
+  #card-swiper {
+    --visible: 5;
   }
 }
