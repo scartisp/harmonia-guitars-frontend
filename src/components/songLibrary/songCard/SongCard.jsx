@@ -33,8 +33,9 @@ const SongCard = props => {
             </div>
             <h4 className='technique-list-title body-txt-font font-12px txt-cream uppercase weight-500'>Techniques </h4>
             <div className='technique-list-div'>
-                <p>{props.technique1}</p>
-                <p>{props.technique2}</p>
+                {props.techniques.map((technique) => (
+                    <p key={technique}>{technique}</p>
+                    ))}
             </div>
             <p style={{ paddingInline: '18px' }} className='flex flex-row align-items-center'>
                 <img src={play} />

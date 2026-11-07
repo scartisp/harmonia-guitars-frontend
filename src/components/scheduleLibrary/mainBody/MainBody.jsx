@@ -5,24 +5,23 @@ import scheduleImage from '../images/beginner.png'
 const MainBody = () => {
     return (
         <section className="border-box width-100 vt-body-marginal-padding background-indigo section-divider">
-            <ListContainer
-                title='recommended schedule'
-                item1={<ScheduleCard
+            <ListContainer>
+                <ScheduleCard
                     image={scheduleImage} title='Beginner Schedule' hours='3'
                     techniqueOne='Open Chords' techniqueTwo='strumming'
                     songOne='Marry Had a Little Lamb'
-                />}
-                item2={<ScheduleCard
+                />
+                <ScheduleCard
                     image={scheduleImage} title='Beginner Schedule' hours='3'
                     techniqueOne='Open Chords' techniqueTwo='strumming'
                     songOne='Marry Had a Little Lamb'
-                />}
-                item3={<ScheduleCard
+                />
+                <ScheduleCard
                     image={scheduleImage} title='Beginner Schedule' hours='3'
                     techniqueOne='Open Chords' techniqueTwo='strumming'
                     songOne='Marry Had a Little Lamb'
-                />}
-            />
+                />
+            </ListContainer>
         </section>
     );
 };

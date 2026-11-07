@@ -8,20 +8,23 @@ import axios from 'axios';
 const API_BASE = 'https://harmonia-gutiars-backened.onrender.com';
 
 const MainBody = () => {
+    //get songs
     const [songs, setSongs] = useState([]);
     useEffect(() => {
-        const loadHouses = async () => {
+        const loadSongs = async () => {
             const response = await axios.get(`${API_BASE}/api/songs`);
             setSongs(response.data);
         };
-        loadHouses();
+        loadSongs();
     }, []);
+    //toggle collapsed
+
     return (
-        <section className='border-box vt-body-marginal-padding background-indigo section-divider'>
+        <section className= 'border-box vt-body-marginal-padding background-indigo section-divider'>
             <ListContainer title='top songs'>
                 {songs.map((song) => (
                     <SongCard key={song._id} image={`${API_BASE}/${song.img}`} genre={song.genre}
-                        title={song.title} rating={song.rating}/>
+                        title={song.title} rating={song.rating} videoId={song.videoId} techniques={song.techniques} />
                 ))}
             </ListContainer>
         </section>
