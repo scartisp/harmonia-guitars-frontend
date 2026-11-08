@@ -20,7 +20,7 @@ const MainBody = () => {
         <section className= 'border-box vt-body-marginal-padding background-indigo section-divider'>
             <ListContainer title='top songs'>
                 {songs.map((song) => (
-                    <SongCard key={song._id} image={`${API_BASE}/${song.img}`} genre={song.genre}
+                    <SongCard key={song._id} image={`${process.env.REACT_APP_API_BASE}/${song.img}`} genre={song.genre}
                         title={song.title} rating={song.rating} videoId={song.videoId} techniques={song.techniques} />
                 ))}
             </ListContainer>
