@@ -2,7 +2,7 @@ import './ListContainer.css'
 import { useState } from 'react';
 
 const ListContainer = ({ children, title }) => {
-
+    //toggle collapsed
     const [isCollapsed, setCollapsed] = useState(true);
     const toggleCollapsed = () => {
         setCollapsed(!isCollapsed);
