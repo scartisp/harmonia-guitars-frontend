@@ -3,6 +3,7 @@ import ListContainer from '../../shared/listContainer/ListContainer';
 import SongCard from '../songCard/SongCard';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { API_BASE_URL } from '../../../config';
 
 const MainBody = () => {
     const [isLoading, setLoading] = useState(true)
@@ -11,7 +12,7 @@ const MainBody = () => {
     const [songs, setSongs] = useState([]);
     useEffect(() => {
         const loadSongs = async () => {
-            const response = await axios.get(`${process.env.REACT_APP_API_BASE}/api/songs`);
+            const response = await axios.get(`${API_BASE_URL}/api/songs`);
             setSongs(response.data);
             toggleLoading();
         };
@@ -22,7 +23,7 @@ const MainBody = () => {
             <ListContainer title='top songs'>
                 {isLoading ? (<p className='body-txt-font txt-cream font-22px'>loading...</p>) :
                     songs.map((song) => (
-                        <SongCard key={song._id} image={`${process.env.REACT_APP_API_BASE}/${song.img}`} genre={song.genre}
+                        <SongCard key={song._id} image= {`${API_BASE_URL}/${song.img}`} genre={song.genre}
                             title={song.title} rating={song.rating} videoId={song.videoId} techniques={song.techniques} />
                     ))
                 }
