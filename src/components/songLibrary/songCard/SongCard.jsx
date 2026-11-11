@@ -1,28 +1,34 @@
 import './SongCard.css';
+import SongDialogue from '../songDialogue/SongDialogue';
 
 import { useState } from 'react';
 
 import play from './images/play.png';
 
 const SongCard = props => {
-    const [playing, setPlaying]= useState(false);
-
+    const [playing, setPlaying] = useState(false);
     const togglePlaying = () => setPlaying(!playing);
-    
+
+    const [showDialog, setShowDialog] = useState(false)
+    const toggleShowDialog = () => {
+        setShowDialog(!showDialog)
+    };
+
     return (
-        <div className='song-card relative flex flex-column background-indigo'>
-            {playing ? 
-                <iframe 
+        <div className='song-card relative flex flex-column background-indigo' onClick={toggleShowDialog}>
+            {playing ?
+                <iframe
                     className='song-card-img'
                     src={`https://www.youtube.com/embed/${props.videoId}?autoplay=1`}
                     allow='autoplay; encrypted media'
                     referrerPolicy='strict-origin-when-cross-origin'
                     allowFullScreen
                 />
-                : <img src={props.image} className='song-card-img' /> }
+                : <img src={props.image} className='song-card-img' />}
             <p className='genre-p absolute body-txt-font weight-500 txt-indigo-deep margin-0 background-orange'>{props.genre}</p>
             <div style={{ paddingInline: '18px', marginTop: '16px' }} className='flex flex-row jst-cnt-spc-between align-items-center'>
-                <h3 style={{ fontSize: '24px', maxWidth: '190px', paddingRight: '10px'}} className='h-font txt-cream margin-0 weight-500'>{props.title}</h3>
+                <h3 style={{ fontSize: '24px', maxWidth: '190px', paddingRight: '10px' }}
+                    className='h-font txt-cream margin-0 weight-500'>{props.title}</h3>
                 <div className='song-rating-div background-indigo-deep max-height-fit-cnt max-width-fit-cnt '>
                     <p>
                         <span style={{ fontSize: '22px' }} className='h-font txt-orange'>{props.rating}</span>
@@ -35,12 +41,15 @@ const SongCard = props => {
             <div className='technique-list-div'>
                 {props.techniques.map((technique) => (
                     <p key={technique}>{technique}</p>
-                    ))}
+                ))}
             </div>
             <p style={{ paddingInline: '18px' }} className='flex flex-row align-items-center'>
                 <img src={play} />
-                <span style={{ paddingLeft: '8px' }} className='list-style-none body-txt-font font-15px txt-orange txt-underline pointer margin-0' onClick={togglePlaying}>Listen on Youtube</span>
+                <span style={{ paddingLeft: '8px' }}
+                    className='list-style-none body-txt-font font-15px txt-orange txt-underline pointer margin-0'
+                    onClick={togglePlaying}>Listen on Youtube</span>
             </p>
+            {showDialog && <SongDialogue />}
         </div>
     );
 };
