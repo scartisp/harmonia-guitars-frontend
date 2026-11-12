@@ -1,5 +1,5 @@
 import './SongCard.css';
-import SongDialog from '../songDialogue/SongDialog';
+import SongDialog from '../songDialog/SongDialog';
 
 import { useState } from 'react';
 

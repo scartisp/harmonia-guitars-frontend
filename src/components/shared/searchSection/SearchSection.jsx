@@ -32,8 +32,8 @@ const SearchSection = props => {
                     <ActiveFilters filterType={props.typeThree} filter={props.filterThree} />
                     <Plus size={12} />
                     <span className="body-txt-font txt-orange font-15px txt-underline">clear all</span>
-
                 </div>
+                <button style={{padding: '7px'}} className='border-box width-fit-cnt body-txt-font background-orange border-radious-6px border-transparent' onClick={props.displayAddModal}>Add {props.adding}</button>
             </div>
         </section>
     )

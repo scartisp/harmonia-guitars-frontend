@@ -8,6 +8,7 @@ const SongLibrary = () => {
             <SearchSection
                 searchPillOne='All' searchPillTwo='Song name' searchPillThree='Techniques' searchPillFour='Genres'
                 typeOne='Genre' filterOne='Top songs' typeTwo='Technique' filterTwo='Bends' typeThree='Song' filterThree='The thrill is Gone'
+                adding='Song'
             />
             <MainBody />
         </section>

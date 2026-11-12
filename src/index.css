@@ -298,6 +298,10 @@ body img {
   border-radius: 14px;
 }
 
+.border-radious-6px {
+  border-radius: 6px;
+}
+
 .gap-8px {
   gap: 8px;
 }
@@ -312,4 +316,8 @@ body img {
 
 .display-none {
   display: none;
+}
+
+.general-btn-padding {
+  padding: 14px;
 }
