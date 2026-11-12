@@ -1,5 +1,5 @@
 import './SongCard.css';
-import SongDialogue from '../songDialogue/SongDialogue';
+import SongDialog from '../songDialogue/SongDialog';
 
 import { useState } from 'react';
 
@@ -11,11 +11,14 @@ const SongCard = props => {
 
     const [showDialog, setShowDialog] = useState(false)
     const toggleShowDialog = () => {
-        setShowDialog(!showDialog)
+        setShowDialog(!showDialog);
+    };
+    const closeDialog = () => {
+        setShowDialog(false);
     };
 
     return (
-        <div className='song-card relative flex flex-column background-indigo' onClick={toggleShowDialog}>
+        <div className='song-card relative flex flex-column background-indigo' >
             {playing ?
                 <iframe
                     className='song-card-img'
@@ -24,13 +27,15 @@ const SongCard = props => {
                     referrerPolicy='strict-origin-when-cross-origin'
                     allowFullScreen
                 />
-                : <img src={props.image} className='song-card-img' />}
-            <p className='genre-p absolute body-txt-font weight-500 txt-indigo-deep margin-0 background-orange'>{props.genre}</p>
+                : <img src={props.image} className='song-card-img pointer' onClick={toggleShowDialog} />}
+            <p className='genre-p absolute body-txt-font weight-500 txt-indigo-deep margin-0 background-orange'>
+                {props.genre}
+            </p>
             <div style={{ paddingInline: '18px', marginTop: '16px' }} className='flex flex-row jst-cnt-spc-between align-items-center'>
                 <h3 style={{ fontSize: '24px', maxWidth: '190px', paddingRight: '10px' }}
                     className='h-font txt-cream margin-0 weight-500'>{props.title}</h3>
                 <div className='song-rating-div background-indigo-deep max-height-fit-cnt max-width-fit-cnt '>
-                    <p>
+                    <p className='flex align-items-center jst-cnt-center'>
                         <span style={{ fontSize: '22px' }} className='h-font txt-orange'>{props.rating}</span>
                         /10
                     </p>
@@ -49,7 +54,9 @@ const SongCard = props => {
                     className='list-style-none body-txt-font font-15px txt-orange txt-underline pointer margin-0'
                     onClick={togglePlaying}>Listen on Youtube</span>
             </p>
-            {showDialog && <SongDialogue />}
+            {showDialog &&
+                <SongDialog closeDialog={closeDialog} image={props.image}
+                    artist={props.artist} techniques={props.techniques} />}
         </div>
     );
 };

@@ -6,6 +6,7 @@ import axios from 'axios';
 import { API_BASE_URL } from '../../../config';
 
 const MainBody = () => {
+    //change loading state
     const [isLoading, setLoading] = useState(true)
     const toggleLoading = () => setLoading(!isLoading);
     //get songs
@@ -24,7 +25,7 @@ const MainBody = () => {
                 {isLoading ? (<p className='body-txt-font txt-cream font-22px'>loading...</p>) :
                     songs.map((song) => (
                         <SongCard key={song._id} image= {`${API_BASE_URL}/${song.img}`} genre={song.genre}
-                            title={song.title} rating={song.rating} videoId={song.videoId} techniques={song.techniques} />
+                            title={song.title} artist={song.artist} rating={song.rating} videoId={song.videoId} techniques={song.techniques} />
                     ))
                 }
             </ListContainer>

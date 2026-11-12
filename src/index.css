@@ -217,6 +217,14 @@ body img {
   max-width: 1300px;
 }
 
+.max-width-500 {
+  max-width: 500px;
+}
+
+.max-width-400 {
+  max-width: 400px;
+}
+
 .max-width-300 {
   max-width: 300px;
 }
@@ -228,6 +236,10 @@ body img {
 
 .padding-10 {
   padding: 10px;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
 }
 
 .marginal-padding {
@@ -280,6 +292,10 @@ body img {
 
 .border-transparent {
   border: transparent;
+}
+
+.border-radious-14px {
+  border-radius: 14px;
 }
 
 .gap-8px {

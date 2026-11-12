@@ -1,3 +1,46 @@
 #song-dialog {
   display: block;
 }
+
+.song-card-dialog {
+  width: 100%;
+  border: 1px solid var(--brand-cream);
+  border-radius: 14px;
+}
+
+.song-card-img-dialog {
+  display: block;
+  width: 100%;
+  aspect-ratio: 300 / 190;
+  object-fit: cover;
+  border-radius: 14px;
+}
+
+.song-dialog-content-ul li:not(:last-child) {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.song-dialog-content-ul li:last-child {
+  display: flex;
+  flex-direction: column;
+}
+
+.technique-list-div-song-dialog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+
+.technique-list-div-song-dialog p {
+  font-family: var(--inter-font);
+  font-size: 12px;
+  color: var(--brand-cream);
+  background-color: var(--brand-indigo-deep);
+  padding: 5px 10px;
+  margin: 0;
+  border: 1px solid var(--brand-cream);
+  border-radius: 6px;
+}
