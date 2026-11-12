@@ -10,7 +10,7 @@ list of genres?
 */
 const SongDialogue = props => {
     return (
-        <div id="song-dialog" className="w3-modal" onClick={props.closeDialog}>
+        <div className="w3-modal modal" onClick={props.closeDialog}>
             <div
                 className="w3-modal-content flex jst-cnt-center body-marginal-padding background-deepest-indigo max-width-500 border-radious-14px" onClick={e => e.stopPropagation()}>
                 <div className="w3-container padding-0">

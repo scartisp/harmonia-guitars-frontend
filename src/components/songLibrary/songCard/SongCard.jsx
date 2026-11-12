@@ -13,10 +13,7 @@ const SongCard = props => {
     const toggleShowDialog = () => {
         setShowDialog(!showDialog);
     };
-    const closeDialog = () => {
-        setShowDialog(false);
-    };
-
+    
     return (
         <div className='song-card relative flex flex-column background-indigo' >
             {playing ?
@@ -55,7 +52,7 @@ const SongCard = props => {
                     onClick={togglePlaying}>Listen on Youtube</span>
             </p>
             {showDialog &&
-                <SongDialog closeDialog={closeDialog} image={props.image}
+                <SongDialog closeDialog={toggleShowDialog} image={props.image}
                     artist={props.artist} techniques={props.techniques} />}
         </div>
     );

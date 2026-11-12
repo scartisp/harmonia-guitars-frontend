@@ -40,7 +40,7 @@ const Contact = ({ isOpen }) => {
                 <label className='form-field' htmlFor='message'>Message:</label>
                 <textarea className='form-field' name="message" placeholder='Your Message' required></textarea>
             </p>
-            <p><button id='form-send-button' className='form-field pointer' type="submit">Send</button></p>
+            <p><button id='' className='form-send-button form-field pointer' type="submit">Send</button></p>
             <p id='form-result' className='form-field' >{result}</p>
         </form>
     );

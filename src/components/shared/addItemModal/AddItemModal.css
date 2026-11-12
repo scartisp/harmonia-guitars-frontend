@@ -1,0 +1,24 @@
+#add-item-form p {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--inter-font);
+  margin: 0;
+}
+
+#add-item-form label {
+  color: var(--brand-cream);
+}
+
+#add-item-form input {
+   margin-bottom: 5px;
+}
+
+#form-send-button {
+  color: var(--brand-indigo-deep);
+  width: fit-content;
+  padding: 7px;
+  margin-bottom: 5px;
+  background-color: var(--brand-orange);
+  border: transparent;
+  border-radius: 6px;
+}

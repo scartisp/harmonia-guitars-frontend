@@ -1,0 +1,10 @@
+.form-field::file-selector-button {
+  box-sizing: border-box;
+  font-family: var(--inter-font);
+  color: var(--brand-indigo-deep);
+  padding: 7px;
+  border: transparent;
+  border-radius: 6px;
+  background-color: var(--brand-orange);
+  cursor: pointer;
+}

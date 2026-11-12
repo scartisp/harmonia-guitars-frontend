@@ -28,8 +28,3 @@
   color: var(--brand-cream);
   margin: 0;
 }
-
-.form-field {
-  font-family: var(--inter-font);
-  font-size: 15px;
-}

@@ -277,6 +277,11 @@ body img {
   list-style: none;
 }
 
+/*modal*/
+.modal {
+  display: block;
+}
+
 /*msc*/
 .border-box {
   box-sizing: border-box;
@@ -320,4 +325,19 @@ body img {
 
 .general-btn-padding {
   padding: 14px;
+}
+
+.form-send-button {
+  color: var(--brand-indigo-deep);
+  width: fit-content;
+  padding: 7px;
+  margin-bottom: 5px;
+  background-color: var(--brand-orange);
+  border: transparent;
+  border-radius: 6px;
+}
+
+.form-field {
+  font-family: var(--inter-font);
+  font-size: 15px;
 }
