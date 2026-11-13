@@ -1,13 +1,6 @@
 import './SongDialogue.css';
 import { X } from 'lucide-react';
 
-/*the contents of the dialogue will be
-the image
-the artist
-total ratings
-the ability to add your own rating
-list of genres?
-*/
 const SongDialogue = props => {
     return (
         <div className="w3-modal modal" onClick={props.closeDialog}>
@@ -31,8 +24,8 @@ const SongDialogue = props => {
                             <h3 className='h-font font-22px txt-cream padding-left-10 margin-0'>{props.artist}</h3>
                         </li>
                         <li>
-                            <h2 className='h-font font-18px txt-cream uppercase margin-0'>number of ratings:</h2>
-                            <h3 className='body-txt-font font-14px txt-cream padding-left-10 margin-0'>{props.artist}</h3>
+                            <h2 className='h-font font-26px txt-cream uppercase margin-0'>number of ratings:</h2>
+                            <h3 className='h-font font-22px txt-cream padding-left-10 margin-0'>{props.ratingCount}</h3>
                         </li>
                         <li className='flex-column'>
                             <h2 className='h-font font-18px txt-cream uppercase margin-0'>techniques:</h2>

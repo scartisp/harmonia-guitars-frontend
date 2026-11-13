@@ -53,7 +53,7 @@ const SongCard = props => {
             </p>
             {showDialog &&
                 <SongDialog closeDialog={toggleShowDialog} image={props.image}
-                    artist={props.artist} techniques={props.techniques} />}
+                    artist={props.artist} techniques={props.techniques} ratingCount={props.ratingCount} />}
         </div>
     );
 };
