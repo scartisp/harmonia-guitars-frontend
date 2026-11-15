@@ -99,9 +99,9 @@ const SongLibrary = () => {
                         <input className="form-field" type="text" name="link" placeholder="youtube link" required />
                     </p>
                     <div>
-                        {addedSongImgSrc === '' ? null : <img src={addedSongImgSrc} />}
                         <p className='flex flex-column margin-0'>
                             <label className="form-field" htmlFor="img">Image:</label>
+                            {addedSongImgSrc === '' ? null : <img src={addedSongImgSrc} />}
                             <input className="form-field body-txt-font txt-cream" type="file" accept="image/*" name="img"
                                 placeholder="add image" onChange={uploadImg} required />
                         </p>

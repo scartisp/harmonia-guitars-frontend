@@ -5,6 +5,8 @@ import { useState } from 'react';
 
 import play from './images/play.png';
 
+import { Ellipsis } from 'lucide-react';
+
 const SongCard = props => {
     const [playing, setPlaying] = useState(false);
     const togglePlaying = () => setPlaying(!playing);
@@ -41,9 +43,10 @@ const SongCard = props => {
             </div>
             <h4 className='technique-list-title body-txt-font font-12px txt-cream uppercase weight-500'>Techniques </h4>
             <div className='technique-list-div'>
-                {props.techniques.map((technique) => (
+                {props.techniques.slice(0,3).map((technique) => (
                     <p key={technique}>{technique}</p>
                 ))}
+                {props.techniques.length > 3 && <Ellipsis  color='var(--brand-cream)'/>}
             </div>
             <p style={{ paddingInline: '18px' }} className='flex flex-row align-items-center'>
                 <img src={play} />

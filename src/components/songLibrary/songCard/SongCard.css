@@ -43,6 +43,7 @@
 .technique-list-div {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 8px;
   margin-inline: 18px;
   padding-top: 8px;
