@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/harmonia-guitars-frontend/static/css/main.f9174b68.css",
-    "main.js": "/harmonia-guitars-frontend/static/js/main.f4cb12c0.js",
+    "main.css": "/harmonia-guitars-frontend/static/css/main.b95b2289.css",
+    "main.js": "/harmonia-guitars-frontend/static/js/main.7a4d564d.js",
     "static/media/Hero.svg": "/harmonia-guitars-frontend/static/media/Hero.aeac8cb2e6fb69849728.svg",
     "static/media/Logo-mark.svg": "/harmonia-guitars-frontend/static/media/Logo-mark.01f355553b303ad6386d8f3b09ab8c9a.svg",
     "static/media/practice-img.png": "/harmonia-guitars-frontend/static/media/practice-img.54fb32b8176d43c2ffc1.png",
@@ -16,11 +16,11 @@
     "static/media/guitar-outline.png": "/harmonia-guitars-frontend/static/media/guitar-outline.e070672f88805bcaf88a.png",
     "index.html": "/harmonia-guitars-frontend/index.html",
     "static/media/homepage-bottom.svg": "/harmonia-guitars-frontend/static/media/homepage-bottom.c0420f7c0e9b286a9048.svg",
-    "main.f9174b68.css.map": "/harmonia-guitars-frontend/static/css/main.f9174b68.css.map",
-    "main.f4cb12c0.js.map": "/harmonia-guitars-frontend/static/js/main.f4cb12c0.js.map"
+    "main.b95b2289.css.map": "/harmonia-guitars-frontend/static/css/main.b95b2289.css.map",
+    "main.7a4d564d.js.map": "/harmonia-guitars-frontend/static/js/main.7a4d564d.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9174b68.css",
-    "static/js/main.f4cb12c0.js"
+    "static/css/main.b95b2289.css",
+    "static/js/main.7a4d564d.js"
   ]
 }
