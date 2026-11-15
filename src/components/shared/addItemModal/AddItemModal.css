@@ -1,16 +1,23 @@
-#add-item-form p {
+#add-item-form > p, #add-item-form > div {
   display: flex;
   flex-direction: column;
   font-family: var(--inter-font);
   margin: 0;
+  margin-bottom: 5px;
 }
 
 #add-item-form label {
   color: var(--brand-cream);
 }
 
-#add-item-form input {
-   margin-bottom: 5px;
+#add-item-form select:has(option[value='']:checked),
+#add-item-form ::placeholder {
+  color: #757575;
+}
+
+#add-item-form input,
+#add-item-form select {
+  font-family: var(--inter-font);
 }
 
 #form-send-button {

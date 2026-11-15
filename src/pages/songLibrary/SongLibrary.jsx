@@ -60,7 +60,7 @@ const SongLibrary = () => {
             />
             <MainBody isLoading={isLoading} songs={songs} />
             {showAddSongModal &&
-                <AddItemModal closeModal={toggleShowAddSongModal} addSong={addSong}>
+                <AddItemModal closeModal={toggleShowAddSongModal} endpoint='songs' addItem={addSong}>
                     <p>
                         <label className="form-field" htmlFor="title">Song Title:</label>
                         <input className="form-field" type="text" name="title" placeholder="song title" required />
@@ -76,7 +76,7 @@ const SongLibrary = () => {
                             {genres.map(genre => <option key={genre} value={genre}>{genre}</option>)}
                         </select>
                     </p>
-                    <div className='flex flex-column'>
+                    <div >
                         <label className="form-field" htmlFor="techniques">Select up to 5 techniques:</label>
                         <select value='' disabled={selectedTechniques.length >= 5}
                             onChange={e => addSelectedTechnique(e.target.value)}>
@@ -100,7 +100,7 @@ const SongLibrary = () => {
                     </p>
                     <div>
                         {addedSongImgSrc === '' ? null : <img src={addedSongImgSrc} />}
-                        <p>
+                        <p className='flex flex-column margin-0'>
                             <label className="form-field" htmlFor="img">Image:</label>
                             <input className="form-field body-txt-font txt-cream" type="file" accept="image/*" name="img"
                                 placeholder="add image" onChange={uploadImg} required />

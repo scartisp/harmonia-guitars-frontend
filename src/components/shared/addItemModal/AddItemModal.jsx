@@ -5,15 +5,15 @@ import { useState } from 'react';
 //TODO
 /* make this actually generic, right now it has addSong, newSong, addSongToServer, /api/songs, etc. Fine for now but
 will need changing */
-const AddItemModal = ({ closeModal, addSong, children }) => {
+const AddItemModal = ({ closeModal, endpoint, addItem, children }) => {
     const [result, setResult] = useState('');
 
-    const addSongToServer = async(e) => {
+    const addItemToServer = async(e) => {
         e.preventDefault();
         setResult('Sending...');
         const formData = new FormData(e.target);
 
-        const response = await fetch(`${API_BASE_URL}/api/songs`,
+        const response = await fetch(`${API_BASE_URL}/api/${endpoint}`,
             {
                 'method': 'POST',
                 'body': formData
@@ -22,11 +22,11 @@ const AddItemModal = ({ closeModal, addSong, children }) => {
         await new Promise(resolve => setTimeout(resolve, 1000));
         if (response.status === 200) {
             const newSong = await response.json()
-            addSong(newSong);
-            setResult('song added');
+            addItem(newSong);
+            setResult('item added');
 
         } else {
-            setResult('error adding house');
+            setResult('error adding item');
         }
     }
     
@@ -40,7 +40,7 @@ const AddItemModal = ({ closeModal, addSong, children }) => {
                         <X color={'var(--brand-cream)'} />
                     </span>
                 </div>
-                <form id='add-item-form' onSubmit={addSongToServer}>
+                <form id='add-item-form' onSubmit={addItemToServer}>
                     {children}
                     <p style={{ marginTop: '5px' }}><button className='form-field form-send-button pointer' type='submit'>Add Song</button></p>
                     <p id='form-result' className='form-field' >{result}</p>
