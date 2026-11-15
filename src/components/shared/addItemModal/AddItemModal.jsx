@@ -2,7 +2,9 @@ import './AddItemModal.css'
 import { API_BASE_URL } from '../../../config';
 import { X } from 'lucide-react';
 import { useState } from 'react';
-
+//TODO
+/* make this actually generic, right now it has addSong, newSong, addSongToServer, /api/songs, etc. Fine for now but
+will need changing */
 const AddItemModal = ({ closeModal, addSong, children }) => {
     const [result, setResult] = useState('');
 
@@ -17,7 +19,7 @@ const AddItemModal = ({ closeModal, addSong, children }) => {
                 'body': formData
             }
         );
-        await new Promise(resolve => setTimeout(resolve, 3000));
+        await new Promise(resolve => setTimeout(resolve, 1000));
         if (response.status === 200) {
             const newSong = await response.json()
             addSong(newSong);
@@ -35,7 +37,7 @@ const AddItemModal = ({ closeModal, addSong, children }) => {
                 <div className="w3-container padding-0">
                     <span id="dialog-close"
                         className="w3-button w3-display-topright" onClick={closeModal}>
-                        <X color={'var(--brand-cream'} />
+                        <X color={'var(--brand-cream)'} />
                     </span>
                 </div>
                 <form id='add-item-form' onSubmit={addSongToServer}>

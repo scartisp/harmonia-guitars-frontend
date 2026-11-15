@@ -8,3 +8,21 @@
   background-color: var(--brand-orange);
   cursor: pointer;
 }
+
+
+.technique-list-div-song-library-modal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.technique-list-div-song-library-modal span {
+  font-family: var(--inter-font);
+  font-size: 12px;
+  color: var(--brand-cream);
+  background-color: var(--brand-indigo-deep);
+  padding: 5px 10px;
+  margin: 0;
+  border: 1px solid var(--brand-cream);
+  border-radius: 6px;
+}
