@@ -7,6 +7,7 @@ const ScheduleLibrary = () => {
             <SearchSection
                 searchPillOne='All' searchPillTwo='Schedule name' searchPillThree='Techniques' searchPillFour='Songs'
                 typeOne='Technique' filterOne='Palm muting' typeTwo='Technique' filterTwo='Strumming' typeThree='Song' filterThree='Harvest'
+                adding='Schedule'
             />
             <MainBody /> 
         </section>

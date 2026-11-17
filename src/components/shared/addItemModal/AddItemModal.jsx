@@ -2,9 +2,7 @@ import './AddItemModal.css'
 import { API_BASE_URL } from '../../../config';
 import { X } from 'lucide-react';
 import { useState } from 'react';
-//TODO
-/* make this actually generic, right now it has addSong, newSong, addSongToServer, /api/songs, etc. Fine for now but
-will need changing */
+
 const AddItemModal = ({ closeModal, endpoint, addItem, children }) => {
     const [result, setResult] = useState('');
 
@@ -24,7 +22,8 @@ const AddItemModal = ({ closeModal, endpoint, addItem, children }) => {
             const newSong = await response.json()
             addItem(newSong);
             setResult('item added');
-
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            closeModal();
         } else {
             setResult('error adding item');
         }

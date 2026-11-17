@@ -1,5 +1,5 @@
 import './SongCard.css';
-import SongDialog from '../songDialog/SongDialog';
+import SongDialog from '../songDialog/SongDialogue';
 
 import { useState } from 'react';
 
@@ -55,7 +55,7 @@ const SongCard = props => {
                     onClick={togglePlaying}>Listen on Youtube</span>
             </p>
             {showDialog &&
-                <SongDialog closeDialog={toggleShowDialog} image={props.image}
+                <SongDialog closeDialog={toggleShowDialog} title={props.title} image={props.image}
                     artist={props.artist} techniques={props.techniques} ratingCount={props.ratingCount} />}
         </div>
     );
